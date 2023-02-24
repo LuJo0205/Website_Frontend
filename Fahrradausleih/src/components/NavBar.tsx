@@ -14,7 +14,7 @@ function NavBar() {
 
             <a onClick={() => {
                             navigate('/Jonas', {replace: false});
-                        }}>Jonas</a>
+                        }}>Tom</a>
 
         <a href="#">Link</a>
         <a onClick={() => {
