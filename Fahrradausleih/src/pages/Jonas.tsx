@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
-
-
+import NavBar from "../components/NavBar";
 
 function jonas() {
 
@@ -9,22 +7,10 @@ function jonas() {
   return (
     <body>
     
-<div className="header">
-  <h1>Hallooooooooooo </h1>
-  <p> Wir sind für sie dar</p>
-</div>
-
-<div className="navbar">
-        <a onClick={() => {
-                            navigate('/', {replace: false});
-                        }}>Home</a>
-        <a onClick={() => {
-                            navigate('/Jonas', {replace: false});
-                        }}>Jonas</a>
-        <a href="#">Link</a>
-        <a href="#" className="right">Link</a>
+      <div className="header">
+       <h1>Hallooooooooooo </h1>
       </div>
-
+      <NavBar /> 
 </body>
   )
 }
