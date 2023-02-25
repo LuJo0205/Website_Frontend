@@ -4,6 +4,7 @@ import Header from "../components/Header";
 
 
 
+
 function home() {
 
   const navigate = useNavigate();
@@ -11,7 +12,8 @@ function home() {
   return (
     <body>  
       <Header />
-      <NavBar /> 
+    
+     
     </body>
   )
 }

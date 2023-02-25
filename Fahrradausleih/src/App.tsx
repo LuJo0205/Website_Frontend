@@ -6,7 +6,7 @@ import SignUp from './pages/SignUp';
 import { Route, Router, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import "./App.css"
-import './NavBar.css'
+
 
 const queryClient = new QueryClient();
 
