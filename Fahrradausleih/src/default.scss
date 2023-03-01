@@ -1,0 +1,21 @@
+@mixin align-horizontal {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+@mixin align-vertical {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+$white: white;
+$red: red;
+$mainColor: grey;
+
+$primary: #3b3833;
+$secondary: #65615a;
+$accent: #dfdfdf;

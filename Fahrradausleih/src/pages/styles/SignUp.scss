@@ -1,0 +1,28 @@
+@import "../../default.scss";
+.text {
+    color: $white;
+}
+
+.form-label {
+    color: $secondary;
+}
+
+.MuiFormLabel-root {
+    color: $secondary !important;
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: $secondary !important;
+}
+
+.MuiInputBase-input {
+    color: $white !important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+    color: $white !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: $white !important;
+}

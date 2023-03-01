@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import './styles/NavBar.css'
 
 function NavBar() {
 
@@ -19,7 +19,7 @@ function NavBar() {
         <a href="#">Link</a>
         <a onClick={() => {
                             navigate('/SignIn', {replace: false});
-                        }} className="right">Link</a>
+                        }} className="right">Anmelden</a>
       </div>
       
 
