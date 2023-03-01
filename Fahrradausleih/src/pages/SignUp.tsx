@@ -6,10 +6,6 @@ import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-<<<<<<< HEAD
-
-=======
->>>>>>> ad315b629864e9305a65883017d7ddf3378be6ac
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -45,14 +41,8 @@ export default function SignUp() {
             flexDirection: 'column',
             alignItems: 'center',
           }}
-        >
-<<<<<<< HEAD
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-          
-=======
-          <Avatar sx={{ m: 1, bgcolor: '#1976D2' }}>
->>>>>>> ad315b629864e9305a65883017d7ddf3378be6ac
-          </Avatar>
+        ><Avatar sx={{ m: 1, bgcolor: '#1976D2' }}>
+        </Avatar>
           <Typography component="h1" variant="h5">
             Registrieren
           </Typography>
