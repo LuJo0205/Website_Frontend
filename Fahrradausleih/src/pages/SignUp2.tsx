@@ -44,7 +44,7 @@ function SignUp() {
   
       if (password === confirmPassword) {
         const requestOptions = {
-          method: "PUT",
+          method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             username: userName,
