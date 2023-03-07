@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import {Avatar, Box, Button, Container, Grid, IconButton, Link, TextField, Typography} from "@mui/material";
 import {useNavigate} from "react-router-dom";
-import "./styles/SignUp.scss";
 import { useForm, Controller } from "react-hook-form";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import md5 from "md5";
+import "./styles/SignUp.scss";
+import NavBar from "../components/NavBar";
+import Header from "../components/Header";
 
 function SignUp() {
     const [userName, setUserName]: any = useState("");
@@ -35,7 +37,7 @@ function SignUp() {
     };
   
     const redirectToLogin = () => {
-      navigate("/Login");
+      navigate("/SignIn2");
     };
   
     const handleSubmitClick = async () => {
@@ -44,7 +46,7 @@ function SignUp() {
   
       if (password === confirmPassword) {
         const requestOptions = {
-          method: "PUT",
+          method: "Post",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             username: userName,
@@ -98,7 +100,11 @@ function SignUp() {
     }
 
     return (
+        
         <div>
+            <Header /> 
+            
+            <NavBar />
             <Container sx={{mt: 2}}>
                 <Box
                     sx={{
@@ -107,15 +113,15 @@ function SignUp() {
                         alignItems: "center",
                     }}
                 >
-                    <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+                    <Avatar sx={{ m: 1, bgcolor: "#1976d2" }}>
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5" className="text">
                         Registrierung
                     </Typography>
-                    <form noValidate>
-                    <Box component="form" noValidate sx={{ mt: 3 }}>
-                        <Grid container spacing={2}>
+                    <form noValidate> 
+                    <Box component="form" noValidate sx={{ mt: 3 }}> 
+                        <Grid container spacing={2}> 
                         <Grid item xs={12}>
                             <Controller
                             name="userName"
@@ -460,7 +466,7 @@ function SignUp() {
                         fullWidth
                         variant="contained"
                         onClick={handleSubmit(handleSubmitClick)}
-                        color="secondary"
+                        color="primary"
                         sx={{ mt: 3, mb: 2 }}
                         >
                         Registrieren

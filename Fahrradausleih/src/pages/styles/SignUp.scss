@@ -1,6 +1,6 @@
 @import "../../default.scss";
 .text {
-    color: $white;
+    color: $black;
 }
 
 .form-label {
@@ -16,13 +16,13 @@
 }
 
 .MuiInputBase-input {
-    color: $white !important;
+    color: $black !important;
 }
 
 .MuiFormLabel-root.Mui-focused {
-    color: $white !important;
+    color: $black !important;
 }
 
 .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: $white !important;
+  border-color: $black !important;
 }

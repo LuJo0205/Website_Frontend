@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import Slideshow from "../components/Slideshow";
 import GoogleMaps from "../components/GoogleMaps";
-import './styles/App.css'
+import './styles/App.scss'
 
 function home() {
 
@@ -14,7 +14,7 @@ function home() {
       <Header />
       <NavBar />
       <Slideshow />
-     
+     <GoogleMaps />
     </body>
   )
 }

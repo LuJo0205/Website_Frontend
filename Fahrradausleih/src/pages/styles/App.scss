@@ -1,4 +1,4 @@
-
+@import "../../default.scss";
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -6,10 +6,10 @@ body {
 
 /* Style the header */
 .header {
-  padding: 80px;
+  padding: 30px;
   text-align: center;
-  background: #1abc9c;
-  color: white;
+  background: $primary;
+  color: $white;
 }
 
 /* Increase the font size of the h1 element */

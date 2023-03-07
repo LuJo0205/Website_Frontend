@@ -18,7 +18,7 @@ function NavBar() {
 
         <a href="#">Link</a>
         <a onClick={() => {
-                            navigate('/SignIn', {replace: false});
+                            navigate('/SignIn2', {replace: false});
                         }} className="right">Anmelden</a>
       </div>
       
