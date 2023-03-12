@@ -1,8 +1,9 @@
 .leaflet-container{
     height: 600px;
-    width: 300 x;
-    
+    width: 300 px;
+    z-index: 1;
 }
 .col{
     padding: 100px;
+    
 }

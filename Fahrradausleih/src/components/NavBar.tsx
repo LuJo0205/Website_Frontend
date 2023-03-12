@@ -13,10 +13,12 @@ function NavBar() {
                         }}>Home</a>
 
             <a onClick={() => {
-                            navigate('/Jonas', {replace: false});
-                        }}>Jonas</a>
+                            navigate('/Ausleihe', {replace: false});
+                        }}>Ausleihen</a>
 
-        <a href="#">Link</a>
+            <a onClick={() => {
+                            navigate('/Rückgabe', {replace: false});
+                        }}>Rückgabe</a>            
         <a onClick={() => {
                             navigate('/SignIn2', {replace: false});
                         }} className="right">Anmelden</a>

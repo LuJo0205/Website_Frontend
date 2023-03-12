@@ -1,0 +1,21 @@
+@import "../../default.scss";
+
+.btn {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  background-color: #1976d2;
+  color: white;
+  border: white;
+ }
+
+ 
+ 
+ .btn:hover {
+    background-color: #ddd;
+    color: black;
+  }
+ 

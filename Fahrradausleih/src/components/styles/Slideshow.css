@@ -3,19 +3,19 @@
     align-items: center;
     justify-content: center;
     background-size: cover;
-    height: 600px;
+    height: 800px;
   }
   
   .each-slide-effect span {
-    padding: 20px;
-    font-size: 20px;
+    padding: 0px;
+    font-size: 0px;
     background: #efefef;
     text-align: center;
   }
   .slideshow-container {
-    max-width: 1000px;
+    max-width: 100%;
     position: relative;
-    margin: auto;
-    padding: 10%;
+    margin: 10 px;
+   
 
   }

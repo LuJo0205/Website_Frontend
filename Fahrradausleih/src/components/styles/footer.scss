@@ -1,0 +1,25 @@
+@import "../../default.scss";
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $primary;
+    color: white;
+    z-index: 2;
+    align-content: center;
+ }
+
+ .footer a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+
+ }
+ .footer a:hover {
+    background-color: #ddd;
+    color: black;
+  }
