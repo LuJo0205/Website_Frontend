@@ -1,0 +1,69 @@
+@import "../../default.scss";
+
+
+.fullGrid{
+padding-top: 75px;
+padding-left: 50px;
+padding-bottom: 75px;
+
+}
+
+.picture {
+    position: relative;
+    
+    
+  }
+.test{
+  padding-right:50px;
+
+}  
+
+  .Karte {
+    max-width: auto;
+    height: auto;
+    position: relative;
+    border: solid;
+    border-color: $primary;
+    margin-left:50px ;
+    margin-right:50px;
+    
+  }
+
+  .InnereKarte {
+    max-width: auto;
+    height: auto;
+    position: relative;
+    border:  solid;
+    border-color: $primary;
+    margin-left:50px ;
+    margin-top: 50px;
+    
+   
+  }
+  .box{
+    
+    border: solid;
+    border-color: $primary;
+    margin-left:50px ;
+  }
+
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }

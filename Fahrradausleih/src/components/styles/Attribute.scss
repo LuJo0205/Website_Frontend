@@ -1,0 +1,39 @@
+.alles {
+    display: block;
+}
+.container {
+    width: 1170px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.colm{
+    width: 33.33333333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.innerColm{
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px; 
+    text-align: center;
+}
+
+.test{
+    box-sizing: border-box;
+
+}
+.test2{
+    overflow: hidden;
+    text-align: center;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/footer.scss'
 import { useNavigate } from "react-router-dom";
+import ScrollButton from "../components/ScrollButton";
 
 export default function App() {
 
@@ -8,7 +9,7 @@ export default function App() {
   return (
     <div className="footer">
         <a onClick={() => {
-                            navigate('/AGB', {replace: false});
+                            navigate('/AGBs', {replace: false});
                         }}>AGB</a>
 
             <a onClick={() => {
@@ -18,6 +19,7 @@ export default function App() {
             <a onClick={() => {
                             navigate('/Kontakt', {replace: false});
                         }}>Kontakt</a>
+            <ScrollButton />            
     </div>
   );
 }

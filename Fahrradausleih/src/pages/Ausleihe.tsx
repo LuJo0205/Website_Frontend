@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Standorte from "../components/Standorte";
 
 
 function Ausleihe() {
@@ -9,7 +11,8 @@ function Ausleihe() {
     <body>  
       <Header />
       <NavBar />
-
+      <Footer />
+      <Standorte />
     </body>
   )
 }

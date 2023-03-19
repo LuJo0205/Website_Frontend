@@ -3,8 +3,10 @@ import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import Slideshow from "../components/Slideshow";
 import GoogleMaps from "../components/GoogleMaps";
+
 import Footer from "../components/Footer";
-import ScrollButton from "../components/ScrollButton";
+import Attribute from "../components/Attribute";
+
 
 
 function home() {
@@ -16,9 +18,10 @@ function home() {
       <Header />
       <NavBar />
       <Slideshow />
+
      <GoogleMaps />
      <Footer />
-     <ScrollButton />
+    
     </body>
   )
 }
