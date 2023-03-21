@@ -24,6 +24,7 @@
     "mdb-react-ui-kit": "^5.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
+    "react-cookie-consent": "^8.0.1",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.3",
     "react-icons": "^4.8.0",

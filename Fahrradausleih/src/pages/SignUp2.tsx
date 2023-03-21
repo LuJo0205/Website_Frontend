@@ -8,6 +8,7 @@ import "./styles/SignUp.scss";
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 
+
 function SignUp() {
     const [userName, setUserName]: any = useState("");
     const [firstName, setFirstName]: any = useState("");
@@ -458,6 +459,12 @@ function SignUp() {
                             <Link sx={{color: "#65615a"}} onClick={redirectToTerms}>Allgemeinen Geschäftsbedingungen (AGBs)</Link>
                             <label style={{color: "#65615a"}}> zu.</label>
                         </Grid>
+                        <Grid item xs={12}>
+                            <label style={{color: "#65615a"}}>
+                            {" "}
+                                Bei erfolgreicher Registrierung werden Sie automatisch zur Stadtseite weitergeleitet!
+                            </label>
+                        </Grid>
                         </Grid>
                         <Button
                         id="signUp-button"
@@ -465,7 +472,9 @@ function SignUp() {
                         type="submit"
                         fullWidth
                         variant="contained"
-                        onClick={handleSubmit(handleSubmitClick)}
+                        onClick={() => {
+                          navigate('/', {replace: false});
+                      }}
                         color="primary"
                         sx={{ mt: 3, mb: 2 }}
                         >

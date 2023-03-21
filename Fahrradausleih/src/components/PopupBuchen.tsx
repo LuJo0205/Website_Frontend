@@ -5,10 +5,10 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import PopupBuchenInhalt from './PopupBuchenInhalt';
 
-const style = {
-   color: '#1976d2',
-  };
+
+
 
 export default function AlertDialog() {
   const [open, setOpen] = React.useState(false);
@@ -31,20 +31,19 @@ export default function AlertDialog() {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        maxWidth= "md"
+        
       >
         <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
+          {"Nutzerinformationen"}
         </DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText>
+          <PopupBuchenInhalt/>
         </DialogContent>
         <DialogActions>
-          <Button  onClick={handleClose}>Disagree</Button>
+          <Button  onClick={handleClose}>Abbrechen</Button>
           <Button  onClick={handleClose} autoFocus>
-            Agree
+            Buchen
           </Button>
         </DialogActions>
       </Dialog>

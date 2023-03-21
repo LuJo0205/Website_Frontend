@@ -15,7 +15,8 @@
   .slideshow-container {
     max-width: 100%;
     position: relative;
-    margin: 10 px;
+    padding-bottom: 80px;
+    
    
 
   }
