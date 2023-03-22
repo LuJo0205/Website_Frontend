@@ -16,7 +16,7 @@ import Fahrradübersicht from './Fahrradübersicht';
 import { Col } from 'react-bootstrap';
 
 
-function Standort() {
+function Rückgabekomponenten() {
     const navigate = useNavigate();
 
     const ColoredLine = ({  }) => (
@@ -28,8 +28,8 @@ function Standort() {
           }}
       />
   );
-  const api = "http://127.0.0.1:8080/standort"       
-  const standortData = useQuery("Standorte", () =>
+  const api = "http://127.0.0.1:8080/fahrrad"       
+  const fahrradData = useQuery("Fahrrad", () =>
         fetch(api ).then((res) => res.json())
     );        
 
@@ -40,7 +40,7 @@ function Standort() {
                   
     
         <Grid container xs={12}  spacing={5} className="fullGrid" >
-            {standortData?.data?.map(
+            {fahrradData?.data?.map(
               (s:any)=>(
                 <>
                   <Grid item xs={6} className="picture" spacing={5}>
@@ -53,23 +53,17 @@ function Standort() {
                 <Card className='Karte'>
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      Informationen über den Standort
+                      Informationen über das Fahrrad
                     </Typography>
                     <Typography gutterBottom variant="h6" color="text.secondary">
-                        Standort: {s.name}
+                        Model: {s.model}
                     </Typography>
                     <Typography gutterBottom variant="h6" color="text.secondary">
-                        Adresse: {s.adresse}
+                        Preis: {s.price}
                     </Typography>
                   </CardContent>
-                  <CardActions>
-                        <Button href={`https://www.google.de/maps/@${s.latitude},${s.longitude},18.75z`} target="_blank" size="medium" color="primary">
-                         Google Maps
-                        </Button>
-                  </CardActions>
                 </Card>               
               </Grid>
-              <Fahrradübersicht standort={s.id} />
               
             </Grid>
 
@@ -90,4 +84,4 @@ function Standort() {
     </body>
   )
 }
-export default Standort
+export default Rückgabekomponenten
