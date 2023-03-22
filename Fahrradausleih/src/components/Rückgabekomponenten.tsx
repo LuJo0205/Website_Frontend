@@ -46,7 +46,7 @@ function Rückgabekomponenten() {
                   <Grid item xs={6} className="picture" spacing={5}>
               <img src="{s.pictureLink}" alt="Avatar" className="image"> 
               </img>
-              
+
             </Grid>
             <Grid item xs={6}  >
               <Grid item xs={12} >

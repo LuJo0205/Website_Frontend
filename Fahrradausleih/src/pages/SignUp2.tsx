@@ -9,7 +9,6 @@ import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 
 function SignUp() {
-    const [userName, setUserName]: any = useState("");
     const [firstName, setFirstName]: any = useState("");
     const [lastName, setLastName]: any = useState("");
     const [email, setEmail]: any = useState("");
@@ -49,7 +48,6 @@ function SignUp() {
           method: "Post",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            username: userName,
             firstName: firstName,
             name: lastName,
             email: email,
@@ -122,34 +120,6 @@ function SignUp() {
                     <form noValidate> 
                     <Box component="form" noValidate sx={{ mt: 3 }}> 
                         <Grid container spacing={2}> 
-                        <Grid item xs={12}>
-                            <Controller
-                            name="userName"
-                            control={control}
-                            rules={{ required: true, minLength: 3 }}
-                            render={({ field }) => (
-                                <TextField
-                                {...field}
-                                required
-                                fullWidth
-                                label="Benutzername"
-                                autoFocus
-                                onChange={(e: any) => {
-                                    setUserName(e.target.value);
-                                    setValue("userName", e.target.value);
-                                    return;
-                                }}
-                                value={userName}
-                                
-                                InputLabelProps={{
-                                  style: {
-                                    color: "white"
-                                  }
-                                }}
-                                />
-                            )}
-                            />
-                        </Grid>
                         <Grid item xs={12} sm={6}>
                             <Controller
                             name="firstName"

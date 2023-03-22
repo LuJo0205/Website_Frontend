@@ -26,7 +26,7 @@ import Header from "../components/Header";
 
 export default function SignIn() {
 
-    const [userName, setUserName] = useState("");
+    const [email, setEmail] = useState("");
     const [userPassword, setUserPassword] = useState("");
     const apiUlr = `http://localhost:8080/login`;
     const [isLoading, setIsLoading] = useState(false);
@@ -53,7 +53,7 @@ export default function SignIn() {
             method: "PUT",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                username: userName,
+                Email: email,
                 passwordHash: md5(userPassword),
             }),
         };
@@ -61,7 +61,7 @@ export default function SignIn() {
         if (!response.ok) {
             setError({isError: true, msg: `Fehler: ${response.statusText}`});
         } else if (response.ok) {
-            const data: any = await response.json();
+            const data: any = await response.json();    
             setError({isError: false, msg: "No error"});
             redirectHome = true;
         }
@@ -101,7 +101,7 @@ export default function SignIn() {
                     </Typography>
                     <form className="{classes.form}" noValidate>
                         <Controller
-                            name="userName"
+                            name="email"
                             control={control}
                             rules={{required: true, minLength: 3}}
                             render={({field}) => (
@@ -111,14 +111,14 @@ export default function SignIn() {
                                     margin="normal"
                                     required
                                     fullWidth
-                                    label="Benutzername"
+                                    label="Email"
                                     autoFocus
                                     onChange={(e: any) => {
-                                        setUserName(e.target.value);
-                                        setValue("userName", e.target.value);
+                                        setEmail(e.target.value);
+                                        setValue("email", e.target.value);
                                         return;
                                     }}
-                                    value={userName}
+                                    value={email}
                                     InputLabelProps={{
                                       style: {
                                         color: "white"
