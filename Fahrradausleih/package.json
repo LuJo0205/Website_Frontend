@@ -17,6 +17,7 @@
     "@react-google-maps/api": "^2.18.1",
     "@react-spring/parallax": "^9.6.1",
     "bootstrap": "^5.2.3",
+    "canvas-confetti": "^1.6.0",
     "google-map-react": "^2.2.0",
     "leaflet": "^1.9.3",
     "md5": "^2.3.0",

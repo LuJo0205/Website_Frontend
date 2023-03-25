@@ -22,14 +22,14 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import md5 from "md5";
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
+import { setCookie } from "../CookieHandler";
 
 
 export default function SignIn() {
 
     const [email, setEmail] = useState("");
     const [userPassword, setUserPassword] = useState("");
-    const apiUlr = `http://localhost:8080/login`;
-    const [isLoading, setIsLoading] = useState(false);
+    const apiUlr = `http://localhost:8080/users/login`;
     const [error, setError] = useState({isError: false, msg: "No Error"});
     const {
         setValue,
@@ -41,44 +41,41 @@ export default function SignIn() {
     let navigate = useNavigate();
 
     const redirectToHome = () => {
-        navigate("/");
+        navigate('/');
     };
 
     const handleSubmitClick = async () => {
         let redirectHome: boolean = false;
-        setIsLoading(true);
         let passwordToSend: string;
-        //passwordToSend = passwordMd5(userPassword);
+      //  passwordToSend = passwordMd5(userPassword);
         const requestOptions = {
             method: "PUT",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                Email: email,
-                passwordHash: md5(userPassword),
+                email: email,
+                password: md5(userPassword),
             }),
         };
         const response = await fetch(apiUlr, requestOptions);
         if (!response.ok) {
-            setError({isError: true, msg: `Fehler: ${response.statusText}`});
+            setError({isError: true, msg: `Benutzer oder Passwort falsch!`});
+            
         } else if (response.ok) {
-            const data: any = await response.json();    
+            const data: any = await response.json(); 
+            setCookie('id', data.id, 100 );
+            setCookie('name', data.name, 100 );
+            setCookie('firstname', data.firstName, 100 );
+            setCookie('email', data.email, 100 );
+            setCookie('city', data.city, 100 );
+            setCookie('street', data.street, 100 );
+            setCookie('number', data.number, 100 );
             setError({isError: false, msg: "No error"});
-            redirectHome = true;
-        }
-        setIsLoading(false);
-        if (redirectHome) {
             redirectToHome();
         }
+
     };
 
-    if (isLoading)
-        return (
-            <p>Loading</p>
-        );
 
-    function goBack() {
-        navigate(-1);
-    }
 
     return (
         <div >
@@ -103,7 +100,6 @@ export default function SignIn() {
                         <Controller
                             name="email"
                             control={control}
-                            rules={{required: true, minLength: 3}}
                             render={({field}) => (
                                 <TextField
                                     {...field}
@@ -130,11 +126,7 @@ export default function SignIn() {
                         <Controller
                             name="userPassword"
                             control={control}
-                            rules={{
-                                required: true,
-                                minLength: 7,
-                                maxLength: 32,
-                            }}
+
                             render={({field}) => (
                                 <TextField
                                     {...field}
@@ -167,15 +159,12 @@ export default function SignIn() {
                             />
                             <label style={{color: "#65615a"}}>
                             {" "}
-                                Angemeldet bleibe.
+                                Angemeldet bleiben.
                             </label>
                         </Grid>
                         <br/>
                         {error.isError && (
                             <small style={{color: "red"}}>
-                                Ein Fehler ist aufgetreten. Bitte überprüfen Sie ihren
-                                eingegebenen Benutzernamen und das Passwort. Bei technischen
-                                Problemen wenden Sie sich bitte an den Admin dieser Website.
                                 {error.msg}
                             </small>
                         )}
@@ -208,3 +197,5 @@ export default function SignIn() {
         </div>
     );
 }
+
+

@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { getCookie } from "../CookieHandler";
 import './styles/NavBar.css'
 
 function NavBar() {
-
+  const istAngemeldet = getCookie("firstname")
   const navigate = useNavigate();
   return (
     
@@ -21,7 +22,8 @@ function NavBar() {
                         }}>Rückgabe</a>            
         <a onClick={() => {
                             navigate('/SignIn2', {replace: false});
-                        }} className="right">Anmelden</a>
+                        }} className="right">{istAngemeldet==="null"?"Anmelden":"Hallo " +istAngemeldet}</a>
+                        
       </div>
       
 

@@ -2,8 +2,13 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { DialogTitle } from '@mui/material';
+import { useQuery } from 'react-query';
+import { getCookie } from '../CookieHandler';
 
-export default function FormPropsTextFields() {
+export default function FormPropsTextFields(props: any) {
+
+ const{id, preis, model, name, adresse}= props;
+
   return (
     <Box
       component="form"
@@ -17,37 +22,55 @@ export default function FormPropsTextFields() {
       <TextField
           id="outlined-helperText"
           label="Nachname"
-          defaultValue="Name"
+          defaultValue= {getCookie('name')}
+          InputProps={{
+            readOnly: true,
+          }}
           
         />
          <TextField
           id="outlined-helperText"
           label="Vorname"
-          defaultValue="Name"
+          defaultValue={getCookie('firstname')}
+          InputProps={{
+            readOnly: true,
+          }}
           
         />
          <TextField
           id="outlined-helperText"
           label="E-Mail"
-          defaultValue="Name"
+          defaultValue={getCookie('email')}
+          InputProps={{
+            readOnly: true,
+          }}
           
         />
          <TextField
           id="outlined-helperText"
           label="Stadt"
-          defaultValue="Name"
+          defaultValue={getCookie('city')}
+          InputProps={{
+            readOnly: true,
+          }}
           
         />
          <TextField
           id="outlined-helperText"
           label="Straße"
-          defaultValue="Name"
+          defaultValue={getCookie('street')}
+          InputProps={{
+            readOnly: true,
+          }}
           
         />
          <TextField
           id="outlined-helperText"
           label="Hausnummer"
-          defaultValue="Name"
+          defaultValue={getCookie('number')}
+          InputProps={{
+            readOnly: true,
+          }}
           
         />
         <DialogTitle id="alert-dialog-title">
@@ -57,7 +80,7 @@ export default function FormPropsTextFields() {
         <TextField
           id="outlined-helperText"
           label="Modell"
-          defaultValue="Name"
+          defaultValue={model}
           InputProps={{
             readOnly: true,
           }}
@@ -66,7 +89,7 @@ export default function FormPropsTextFields() {
          <TextField
           id="outlined-helperText"
           label="Preis"
-          defaultValue="Name"
+          defaultValue={preis}
           InputProps={{
             readOnly: true,
           }}
@@ -75,7 +98,7 @@ export default function FormPropsTextFields() {
          <TextField
           id="outlined-helperText"
           label="Stadtion"
-          defaultValue="entspricht name bei standort"
+          defaultValue={name}
           InputProps={{
             readOnly: true,
           }}
@@ -84,7 +107,7 @@ export default function FormPropsTextFields() {
         <TextField
           id="outlined-helperText"
           label="Adresse"
-          defaultValue="Name"
+          defaultValue={adresse}
           InputProps={{
             readOnly: true,
           }}

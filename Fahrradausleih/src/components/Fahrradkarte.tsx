@@ -20,7 +20,7 @@ import PopupBuchen from "../components/PopupBuchen";
 
 function Fahrradkarte( props:any) {
     const navigate = useNavigate();
-    const {id,model} = props;
+    const {id,preis,model, name, adresse} = props;
     const ColoredLine = ({  }) => (
       <hr
           style={{
@@ -32,7 +32,7 @@ function Fahrradkarte( props:any) {
   );
   
   return (
-    <Grid item xs={3} >
+    <Grid item xs={12} sm={6} md={4}>
         <Card className='InnereKarte'>
                     <CardContent>
                       <Typography gutterBottom variant="h6" component="div">
@@ -41,7 +41,7 @@ function Fahrradkarte( props:any) {
                     </CardContent>
                     <CardActions>
                         <Button size="small" color="primary">
-                            <PopupBuchen/>
+                            <PopupBuchen id={id} model={model} preis={preis} name={name} adresse={adresse}/>
                         </Button>
                     </CardActions>
                   </Card>  

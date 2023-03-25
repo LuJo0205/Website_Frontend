@@ -14,9 +14,12 @@ import { useQuery } from 'react-query';
 import "./Fahrradkarte.tsx"
 import Fahrradübersicht from './Fahrradübersicht';
 import { Col } from 'react-bootstrap';
+import { getCookie } from '../CookieHandler';
+import RückgabeElement from './RückgabeElement';
 
 
 function Rückgabekomponenten() {
+
     const navigate = useNavigate();
 
     const ColoredLine = ({  }) => (
@@ -28,49 +31,28 @@ function Rückgabekomponenten() {
           }}
       />
   );
-  const api = "http://127.0.0.1:8080/fahrrad"       
-  const fahrradData = useQuery("Fahrrad", () =>
-        fetch(api ).then((res) => res.json())
+
+
+  const userID= getCookie('id');
+  
+  const api = "http://127.0.0.1:8080/users/"+ userID +"/bookings"       
+  const buchungen = useQuery("aktiveBuchung", () =>
+          fetch(api).then((res) => res.json()
+
+          )
+
     );        
 
   return (
 
-    <body>
-      
-                  
-    
+    <>
         <Grid container xs={12}  spacing={5} className="fullGrid" >
-            {fahrradData?.data?.map(
+            {buchungen?.data?.map(
               (s:any)=>(
                 <>
-                  <Grid item xs={6} className="picture" spacing={5}>
-              <img src="{s.pictureLink}" alt="Avatar" className="image"> 
-              </img>
-
-            </Grid>
-            <Grid item xs={6}  >
-              <Grid item xs={12} >
-                <Card className='Karte'>
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Informationen über das Fahrrad
-                    </Typography>
-                    <Typography gutterBottom variant="h6" color="text.secondary">
-                        Model: {s.model}
-                    </Typography>
-                    <Typography gutterBottom variant="h6" color="text.secondary">
-                        Preis: {s.price}
-                    </Typography>
-                  </CardContent>
-                </Card>               
-              </Grid>
-              
-            </Grid>
-
-            <Grid item xs={12}>
-               <ColoredLine></ColoredLine>
-            </Grid>
-            
+                
+                  {s.aktiv?(<RückgabeElement model={s.vo.model} preis={s.vo.price} id={s.id}/>):(<></>)}
+  
             
                 </>
               )
@@ -81,7 +63,7 @@ function Rückgabekomponenten() {
 
                                
           
-    </body>
+    </>
   )
 }
 export default Rückgabekomponenten

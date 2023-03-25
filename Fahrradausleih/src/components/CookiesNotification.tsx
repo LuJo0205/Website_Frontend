@@ -2,7 +2,7 @@
 import React from "react";
 import CookieConsent from "react-cookie-consent";
 
-function CookieNotification(){
+function CookiesNotification(){
 
     return(
         <div>
@@ -21,4 +21,4 @@ function CookieNotification(){
     )
 }
 
-export default CookieNotification;
+export default CookiesNotification;

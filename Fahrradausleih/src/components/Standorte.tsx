@@ -44,7 +44,7 @@ function Standort() {
               (s:any)=>(
                 <>
                   <Grid item xs={6} className="picture" spacing={5}>
-              <img src="{s.pictureLink}" alt="Avatar" className="image"> 
+              <img src={s.pictureLink} alt="Avatar" className="image"> 
               </img>
               
             </Grid>
@@ -69,7 +69,7 @@ function Standort() {
                   </CardActions>
                 </Card>               
               </Grid>
-              <Fahrradübersicht standort={s.id} />
+              <Fahrradübersicht standort={s.id} name={s.name} adresse={s.adresse}/>
               
             </Grid>
 

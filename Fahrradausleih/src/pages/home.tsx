@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import Slideshow from "../components/Slideshow";
 import GoogleMaps from "../components/GoogleMaps";
-import CookieNotification from "../components/CookieNotification";
+
 import ColoredLine from "../components/ColoredLine";
 import HomeIcons from "../components/HomeIcons";
 
@@ -26,7 +26,7 @@ function home() {
       <ColoredLine/>
       <GoogleMaps />
       <Footer />
-      <CookieNotification/>
+    
       
     
     </body>

@@ -7,6 +7,7 @@ import md5 from "md5";
 import "./styles/SignUp.scss";
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
+import { setCookie } from "../CookieHandler";
 
 function SignUp() {
     const [firstName, setFirstName]: any = useState("");
@@ -65,8 +66,15 @@ function SignUp() {
           setAgree(false);
         } else if (response.ok) {
           const data: any = await response.json();
+          setCookie('id', data.id, 100 );
+          setCookie('name', data.name, 100 );
+          setCookie('firstname', data.firstName, 100 );
+          setCookie('email', data.email, 100 );
+          setCookie('city', data.city, 100 );
+          setCookie('street', data.street, 100 );
+          setCookie('number', data.number, 100 );
           setError({ isError: false, msg: "No error" });
-          redirectHome = true;
+          redirectToHome();
         }
         setIsLoading(false);
         if (redirectHome) {
