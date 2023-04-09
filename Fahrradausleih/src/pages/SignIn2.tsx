@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-
 import Grid from "@mui/material/Grid";
 import {
     Avatar,
@@ -47,7 +46,6 @@ export default function SignIn() {
     const handleSubmitClick = async () => {
         let redirectHome: boolean = false;
         let passwordToSend: string;
-      //  passwordToSend = passwordMd5(userPassword);
         const requestOptions = {
             method: "PUT",
             headers: {"Content-Type": "application/json"},
@@ -81,8 +79,7 @@ export default function SignIn() {
         <div >
             <Header />
             <NavBar />
-            <Container sx={{mt: 2}}              
-            >
+            <Container sx={{mt: 2}}>
                 <Box
                     sx={{
                     display: "flex",

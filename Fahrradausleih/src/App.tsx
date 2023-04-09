@@ -1,5 +1,4 @@
 import Home from './pages/home';
-import Jonas from './pages/Jonas';
 import SignIn2 from './pages/SignIn2';
 import SignUp2 from './pages/SignUp2';
 import Ausleihe from './pages/Ausleihe';
@@ -23,19 +22,17 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <CookiesNotification/>
       
-      <Routes>
-        <Route path="/" element={<><Home /></>} />
-        <Route path="/Jonas" element={<><Jonas /></>} />
-        <Route path="/SignIn2" element={<><SignIn2 /></>} />
-        <Route path="/SignUp2" element={<><SignUp2 /></>} />
-        <Route path="/Ausleihe" element={<><Ausleihe /></>} />
-        <Route path="/Rückgabe" element={<><Rückgabe /></>} />
-        <Route path="/AGBs" element={<><AGBs /></>} />
-        <Route path="/Impressum" element={<><Impressum /></>} />
-        <Route path="/ThankYouAusleihe" element={<><ThankYouAusleihe /></>} />
-        <Route path="/ThankYouRückgabe" element={<><ThankYouRückgabe /></>} />
-      </Routes>
-        
+        <Routes>
+          <Route path="/" element={<><Home /></>} />
+          <Route path="/SignIn2" element={<><SignIn2 /></>} />
+          <Route path="/SignUp2" element={<><SignUp2 /></>} />
+          <Route path="/Ausleihe" element={<><Ausleihe /></>} />
+          <Route path="/Rückgabe" element={<><Rückgabe /></>} />
+          <Route path="/AGBs" element={<><AGBs /></>} />
+          <Route path="/Impressum" element={<><Impressum /></>} />
+          <Route path="/ThankYouAusleihe" element={<><ThankYouAusleihe /></>} />
+          <Route path="/ThankYouRückgabe" element={<><ThankYouRückgabe /></>} />
+        </Routes>
       </QueryClientProvider>
     </>
   )

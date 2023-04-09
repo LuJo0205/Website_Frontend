@@ -4,7 +4,7 @@ import osm from "../components/osm-providers.js";
 import L from "leaflet";
 
 import "leaflet/dist/leaflet.css"
-import './styles/GoogleMaps.css'
+import './styles/GoogleMaps.scss'
 import { useQuery } from "react-query";
 
 const markerIcon = new L.Icon({
@@ -20,7 +20,7 @@ const GoogleMaps = () => {
     const ZOOM_LEVEL =15;
 
     const api = "http://127.0.0.1:8080/standort"       
-  const standortData = useQuery("Standorte", () =>
+    const standortData = useQuery("Standorte", () =>
         fetch(api ).then((res) => res.json())
     );        
     
@@ -29,39 +29,27 @@ const GoogleMaps = () => {
         <>
 
           <div className="col">
-                        <MapContainer
-                          center={[49.48419232829004, 8.475619964067945]}
-                          zoom={ZOOM_LEVEL}
-                        
-                          >
-                              <TileLayer url={osm.maptiler.url}/>
-                              
-                      
-                           
-
-
+            <MapContainer
+              center={[49.48419232829004, 8.475619964067945]}
+                zoom={ZOOM_LEVEL}               
+            >
+            <TileLayer url={osm.maptiler.url}/>
             {standortData?.data?.map(
               (s:{name:string, latitude:number, longitude:number})=>(
                 <>
                     <Marker 
-                                position={[s.latitude , s.longitude]} 
-                                icon={markerIcon}
-                              >
-                                <Popup>
-                                  <b>{s.name}</b>
-
-                                </Popup>
-                              </Marker> 
-
-                              
-                    </>
+                      position={[s.latitude , s.longitude]} 
+                      icon={markerIcon}
+                    >
+                      <Popup>
+                        <b>{s.name}</b>
+                      </Popup>
+                    </Marker>  
+                </>
               )
-
             )}
-
-                  </MapContainer>
-          </div>   
-                
+            </MapContainer>
+          </div>                 
         </>
     );
 };

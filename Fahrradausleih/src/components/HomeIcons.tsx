@@ -10,8 +10,6 @@ import "./styles/Icons.scss";
 
 function HomeIcons() {
 
-  
-
   return (
       
      <Grid container xs={12} spacing={5} className='Abstand'>

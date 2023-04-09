@@ -7,18 +7,17 @@ import "./styles/Impressum.scss";
 
 function Impressum(props: any) {
 
-
     return (
-    <body> 
-        <Header />
-        <NavBar />
-        <Footer />
+        <body> 
+            <Header />
+            <NavBar />
+            <Footer />
 
-        <div>
-            <Container className="wholeContainer" sx={{
-                pb: 6,
-                position: "relative",
-            }}>
+            <div>
+                <Container className="wholeContainer" sx={{
+                    pb: 6,
+                    position: "relative",
+                }}>
                    
                 <Container className="ImpressumContainer">
                     

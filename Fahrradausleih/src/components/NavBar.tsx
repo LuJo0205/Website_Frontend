@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { getCookie } from "../CookieHandler";
-import './styles/NavBar.css'
+import './styles/NavBar.scss'
 
 function NavBar() {
   const istAngemeldet = getCookie("firstname")
@@ -20,13 +20,11 @@ function NavBar() {
             <a onClick={() => {
                             navigate('/Rückgabe', {replace: false});
                         }}>Rückgabe</a>            
-        <a onClick={() => {
+            <a onClick={() => {
                             navigate('/SignIn2', {replace: false});
                         }} className="right">{istAngemeldet==="null"?"Anmelden":"Hallo " +istAngemeldet}</a>
                         
       </div>
-      
-
     </body>
   )
 }

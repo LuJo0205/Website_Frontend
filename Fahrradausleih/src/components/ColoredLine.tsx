@@ -1,7 +1,4 @@
 
-
-
-
 function ColoredLine() {
 
     const ColoredLine = ({  }) => (

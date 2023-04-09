@@ -32,7 +32,6 @@ export default function AlertDialog(props: any) {
     let returnDate = new Date();
     returnDate.setDate(date.getDate()+7)
 
-      //  passwordToSend = passwordMd5(userPassword);
         const requestOptions = {
             method: "POST",
             headers: {"Content-Type": "application/json"},

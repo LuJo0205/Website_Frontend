@@ -1,4 +1,3 @@
-
 import './styles/ThankYou.scss';
 import { useNavigate } from "react-router-dom";
 import { Container } from '@mui/material';
@@ -10,7 +9,6 @@ function ThankYouAusleihe(){
 
     const navigate = useNavigate();
 
-    
     var count = 200;
 
     var defaults = {

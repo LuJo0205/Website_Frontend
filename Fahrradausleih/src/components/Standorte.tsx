@@ -1,19 +1,14 @@
 import './styles/Standort.scss';
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-
-
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { autocompleteClasses, CardActionArea, CardActions } from '@mui/material';
 import Grid from '@mui/material/Grid'; 
 import { useQuery } from 'react-query';
 import "./Fahrradkarte.tsx"
 import Fahrradübersicht from './Fahrradübersicht';
-import { Col } from 'react-bootstrap';
 
 
 function Standort() {
@@ -35,10 +30,7 @@ function Standort() {
 
   return (
 
-    <body>
-      
-                  
-    
+    <body>                  
         <Grid container xs={12}  spacing={5} className="fullGrid" >
             {standortData?.data?.map(
               (s:any)=>(
@@ -70,23 +62,15 @@ function Standort() {
                 </Card>               
               </Grid>
               <Fahrradübersicht standort={s.id} name={s.name} adresse={s.adresse}/>
-              
             </Grid>
-
             <Grid item xs={12}>
                <ColoredLine></ColoredLine>
-            </Grid>
-            
-            
-                </>
-              )
+            </Grid>         
+            </>
+          )
 
-            )}
-          	
+          )}
         </Grid>                       
-
-                               
-          
     </body>
   )
 }

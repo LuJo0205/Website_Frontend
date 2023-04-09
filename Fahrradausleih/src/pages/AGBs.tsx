@@ -1,8 +1,6 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
 import {Container} from "@mui/material";
-import IconButton from "@mui/material/IconButton";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import Box from "@mui/material/Box";
 import "./styles/AGBs.scss";
 
@@ -18,15 +16,15 @@ function AGBs(props: any) {
     };
 
     return (
-    <body> 
-         <Header />
-          <NavBar />
-          <Footer />
-        <div>
-            <Container className="wholeContainer" sx={{
-                pb: 6,
-                position: "relative",
-            }}>
+        <body> 
+            <Header />
+            <NavBar />
+            <Footer />
+            <div>
+                <Container className="wholeContainer" sx={{
+                    pb: 6,
+                    position: "relative",
+                }}>
                    
                 <Container className="AGBContainer">
                     <Box>
@@ -204,7 +202,7 @@ function AGBs(props: any) {
                     </Box>
                 </Container>
             </Container>
-        </div>
+            </div>
         </body>     
     );
 }

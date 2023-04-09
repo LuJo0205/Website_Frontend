@@ -200,7 +200,6 @@ function SignUp() {
                             rules={{
                                 required: true,
                                 minLength: 2,
-                                // => RFC 2822 Email
                                 pattern:
                                 /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i, // eslint-disable-line no-useless-escape
                             }}
@@ -238,7 +237,7 @@ function SignUp() {
                                 minLength: 7,
                                 maxLength: 32,
                                 pattern:
-                                /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[-!@#\$%\^&\*])(?=.{7,})?/i, //eslint-disable-line no-useless-escape
+                                /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[-!@#\$%\^&\*])(?=.{7,})?/i,
                             }}
                             render={({ field }) => (
                                 <TextField

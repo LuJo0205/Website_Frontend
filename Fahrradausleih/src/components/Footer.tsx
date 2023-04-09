@@ -1,4 +1,3 @@
-import React from 'react';
 import './styles/footer.scss'
 import { useNavigate } from "react-router-dom";
 import ScrollButton from "../components/ScrollButton";
