@@ -16,9 +16,7 @@ export default function App() {
                             navigate('/Impressum', {replace: false});
                         }}>Impressum</a>
 
-            <a onClick={() => {
-                            navigate('/Kontakt', {replace: false});
-                        }}>Kontakt</a>
+            
             <ScrollButton />            
     </div>
   );

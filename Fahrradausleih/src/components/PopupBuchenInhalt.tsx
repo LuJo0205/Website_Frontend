@@ -7,7 +7,7 @@ import { getCookie } from '../CookieHandler';
 
 export default function FormPropsTextFields(props: any) {
 
- const{id, preis, model, name, adresse}= props;
+ const{id, model, name, adresse}= props;
 
   return (
     <Box
@@ -86,18 +86,12 @@ export default function FormPropsTextFields(props: any) {
           }}
           
         />
-         <TextField
-          id="outlined-helperText"
-          label="Preis"
-          defaultValue={preis}
-          InputProps={{
-            readOnly: true,
-          }}
-        />
+      
+        
        
          <TextField
           id="outlined-helperText"
-          label="Stadtion"
+          label="Station"
           defaultValue={name}
           InputProps={{
             readOnly: true,

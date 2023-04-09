@@ -21,7 +21,7 @@ import { useState } from 'react';
 
 
 function RückgabeElement(props:any) {
-    const {model, preis,id}= props;
+    const {model, id}= props;
     const [standort,setStandort]: any = useState("");
     const navigate = useNavigate();
 
@@ -49,7 +49,7 @@ function RückgabeElement(props:any) {
             
         } else if (response.ok) {
             const data: any = await response.json(); 
-            navigate('/ThankYou');
+            navigate('/ThankYouRückgabe');
         }
         
 
@@ -75,9 +75,7 @@ function RückgabeElement(props:any) {
                     <Typography gutterBottom variant="h6" color="text.secondary">
                         Model: {model}
                     </Typography>
-                    <Typography gutterBottom variant="h6" color="text.secondary">
-                        Preis: {preis}
-                    </Typography>
+                    
                     
                     
                         <InputLabel id="demo-simple-select-label">Rückgabestandort</InputLabel>

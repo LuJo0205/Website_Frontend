@@ -51,7 +51,7 @@ function Rückgabekomponenten() {
               (s:any)=>(
                 <>
                 
-                  {s.aktiv?(<RückgabeElement model={s.vo.model} preis={s.vo.price} id={s.id}/>):(<></>)}
+                  {s.aktiv?(<RückgabeElement model={s.vo.model}  id={s.id}/>):(<></>)}
   
             
                 </>

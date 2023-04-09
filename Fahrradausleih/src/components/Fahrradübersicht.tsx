@@ -37,7 +37,7 @@ function Fahrradübersicht( props:any) {
     <Grid container xs={12}  className="test">
                 {fahrradData?.data?.map(
                     (s:any)=>(
-                         <Fahrradkarte id={s.id} preis={s.price} model={s.model} name={name} adresse={adresse}/>
+                         <Fahrradkarte id={s.id} model={s.model} name={name} adresse={adresse}/>
                     )
                 )}
     </Grid> 

@@ -33,7 +33,7 @@ function HomeIcons() {
                             <PedalBikeIcon sx={{ fontSize: 100 }} className='Icon'/>
                         </Grid>
                         <Grid item xs={12}>
-                            <h3 className='TextPosition'>Unsere Räder sind made in Germany und besitzen die Straßenverkehrszulassung. </h3>
+                            <h3 className='TextPosition'>Unsere Räder sind Made in Germany und besitzen die Straßenverkehrszulassung. </h3>
                         </Grid>
                     </Grid>
                 </Grid>

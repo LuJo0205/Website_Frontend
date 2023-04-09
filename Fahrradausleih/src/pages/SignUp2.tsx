@@ -8,6 +8,7 @@ import "./styles/SignUp.scss";
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import { setCookie } from "../CookieHandler";
+import SignatureCanvas from 'react-signature-canvas'
 
 function SignUp() {
     const [firstName, setFirstName]: any = useState("");
@@ -39,6 +40,12 @@ function SignUp() {
     const redirectToLogin = () => {
       navigate("/SignIn2");
     };
+
+    let sigPad: any = {}
+  
+    const clear = () => {
+      sigPad.clear()
+    }
   
     const handleSubmitClick = async () => {
       let redirectHome: boolean = false;
@@ -58,6 +65,7 @@ function SignUp() {
             number: number,
             plz: parseInt(plz),
             city: city,
+            Signatur: sigPad.getTrimmedCanvas().toDataURL('image/png').replace("data:image/png;base64,", ""),
           }),
         };
         const response = await fetch(apiUrlAll, requestOptions);
@@ -417,17 +425,17 @@ function SignUp() {
                             </small>
                             )}
                         </Grid>
-
+                        
                         <Grid item xs={12}>
-                            <input
-                            type="checkbox"
-                            value="allowExtraEmails"
-                            color="primary"
-                            />
-                            <label style={{color: "#65615a"}}>
-                            {" "}
-                                Ich möchte Inspiration, Marketingaktionen und Updates per E-Mail erhalten.
-                            </label>
+                              <h3>Unterschrift</h3>
+                            
+                        </Grid>
+                        <Grid item xs={12}>
+                          
+                        <SignatureCanvas penColor='black' backgroundColor="white" canvasProps={{width: "400%", height: "100%", className: 'Canvas'}}
+                          ref={(ref) => { sigPad = ref }}
+                        />
+                            
                         </Grid>
 
                         <Grid item xs={12}>
@@ -460,11 +468,13 @@ function SignUp() {
                         </Button>
                         <Grid container justifyContent="flex-end">
                         <Grid item>
+                       
                             <Link className="loginText" sx={{color: "#65615a"}} onClick={() => redirectToLogin()}>
                                 Du hast bereits einen Account? Logge Dich hier ein!
                             </Link>
                         </Grid>
                         </Grid>
+                        
                     </Box>
                     </form>
                 </Box>

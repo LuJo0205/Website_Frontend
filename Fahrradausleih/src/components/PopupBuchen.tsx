@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export default function AlertDialog(props: any) {
-  const{id, preis,model,name, adresse}= props;
+  const{id,model,name, adresse}= props;
   const [open, setOpen] = React.useState(false);
   const apiUlr = `http://localhost:8080/booking`;
   const [error, setError] = useState({isError: false, msg: "No Error"});
@@ -50,7 +50,7 @@ export default function AlertDialog(props: any) {
             
         } else if (response.ok) {
             const data: any = await response.json(); 
-            navigate('/ThankYou');
+            navigate('/ThankYouAusleihe');
         }
 
     setOpen(false);
@@ -73,7 +73,7 @@ export default function AlertDialog(props: any) {
           {"Nutzerinformationen"}
         </DialogTitle>
         <DialogContent>
-          <PopupBuchenInhalt id={id} preis={preis} model={model} name={name} adresse={adresse}/>
+          <PopupBuchenInhalt id={id} model={model} name={name} adresse={adresse}/>
         </DialogContent>
         <DialogActions>
           <Button  onClick={handleClose}>Abbrechen</Button>

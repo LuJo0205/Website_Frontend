@@ -33,6 +33,7 @@
     "react-modal": "^3.16.1",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.8.1",
+    "react-signature-canvas": "^1.0.6",
     "react-slideshow-image": "^4.2.1",
     "reactjs-popup": "^2.0.5",
     "sass": "^1.58.3",

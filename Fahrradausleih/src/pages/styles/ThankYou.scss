@@ -2,7 +2,8 @@
   
 @mixin home-text {
     position: absolute;
-    left: 50%;
+    text-align: center;
+    padding-left: 34%;
     margin: 0;
     color: $primary;
 }

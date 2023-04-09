@@ -2,8 +2,11 @@
 import './styles/ThankYou.scss';
 import { useNavigate } from "react-router-dom";
 import { Container } from '@mui/material';
+import NavBar from "../components/NavBar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-function ThankYou(){
+function ThankYouRückgabe(){
 
     const navigate = useNavigate();
 
@@ -45,10 +48,15 @@ function ThankYou(){
     });
 
     return(
+        <>
+        <Header/>
+        <NavBar/>
         <Container sx={{margin: "20px"}}>
-            <h2 className='home-header'>Danke für Ihre Buchung!</h2>
+            <h2 className='home-header'>Danke für Ihre Rückgabe!</h2>
         </Container>
+        <Footer/>
+        </>
     )
 }
 
-export default ThankYou;
+export default ThankYouRückgabe;
