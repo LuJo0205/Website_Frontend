@@ -17,14 +17,13 @@ const markerIcon = new L.Icon({
 
 const GoogleMaps = () => {
     
-    const ZOOM_LEVEL =15;
+    const ZOOM_LEVEL =14;
 
     const api = "http://127.0.0.1:8080/standort"       
     const standortData = useQuery("Standorte", () =>
         fetch(api ).then((res) => res.json())
     );        
     
-
     return (
         <>
 

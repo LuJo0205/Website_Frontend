@@ -37,7 +37,7 @@ function Rückgabekomponenten() {
             {buchungen?.data?.map(
               (s:any)=>(
                 <>
-                  {s.aktiv?(<RückgabeElement model={s.vo.model}  id={s.id}/>):(<></>)}
+                  {s.aktiv?(<RückgabeElement model={s.vo.model}  id={s.id} link={s.vo.pictureLink}/>):(<></>)}
                 </>
               )
             )}

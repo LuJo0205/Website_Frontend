@@ -12,7 +12,7 @@ import ColoredLine from './ColoredLine';
 import { useState } from 'react';
 
 function RückgabeElement(props:any) {
-    const {model, id}= props;
+    const {model, id, link}= props;
     const [standort,setStandort]: any = useState("");
     const navigate = useNavigate();
 
@@ -43,7 +43,7 @@ function RückgabeElement(props:any) {
     return(
        <>
             <Grid item xs={6} className="picture" spacing={5}>
-              <img src="{s.pictureLink}" alt="Avatar" className="image"> 
+              <img src={link} alt="Avatar" className="image"> 
               </img>
 
             </Grid>
