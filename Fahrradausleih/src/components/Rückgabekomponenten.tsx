@@ -1,5 +1,4 @@
 import './styles/Standort.scss';
-import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import Grid from '@mui/material/Grid'; 
 import { useQuery } from 'react-query';

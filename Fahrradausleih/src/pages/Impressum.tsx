@@ -2,7 +2,6 @@ import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {Container} from "@mui/material";
-import Box from "@mui/material/Box";
 import "./styles/Impressum.scss";
 
 function Impressum(props: any) {
@@ -30,7 +29,7 @@ function Impressum(props: any) {
                         <p/>
                         <h3 className="text-white">Vertreten durch:</h3>
                         <p className="text-white">Jonas Haberditzl</p>
-                        <p className="text-white">Tom oelmann</p>
+                        <p className="text-white">Tom Oelmann</p>
                         <p/>
                         <h3 className="text-white">Kontakt</h3>
                         <p className="text-white">Telefon: 015208456651</p>
