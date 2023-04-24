@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import { autocompleteClasses, CardActionArea, CardActions } from '@mui/material';
 import Grid from '@mui/material/Grid'; 
 import { useQuery } from 'react-query';
-import "./Fahrradkarte.tsx"
 import Fahrradübersicht from './Fahrradübersicht';
 
 
